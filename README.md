@@ -9,7 +9,7 @@
 
 - **Supporting Razer devices** Keyboards, mice, mouse mats, eGPUs and blade laptops
 - **Custom color picking** Choose your own colors for static, reactive and starlight effects
-- **Persistent color settings** Color effects are saved to onboard memory
+- **Persistent color settings** Color effects are saved to onboard memory if possible
 - **Works on the latest macOS** Including Intel and Apple Silicon. There are no current plans from Razer to support macOS ([source](https://mysupport.razer.com/app/answers/detail/a_id/1381/kw/macOS))
 
 ## Download
@@ -22,6 +22,12 @@ Install by drag and drop to Applications.
 If you get a security warning when opening the app, you need to go to your Mac's "System Preferences", "Security and Privacy", "General" and click "Open" at the bottom to allow Razer macOS to run.
 
 Please see FAQ section below if color changes are not working, otherwise open a new issue.
+
+## Changes in this fork
+
+- Support for Laptop Stand Chroma V2
+- Support from Razer Basilisk V3 Pro (Wired/Wireless) from @94lucasm
+- Updates to Electron/dependencies
 
 ## Device support
 
@@ -37,7 +43,7 @@ Please see FAQ section below if color changes are not working, otherwise open a 
 
 For a complete list of supported devices, please see [openrazer](https://openrazer.github.io).
 
-Confirmed working for:
+### Confirmed working for:
 
 Keyboards:
 
@@ -87,7 +93,7 @@ Keyboards:
 
 Mice:
 
-- Razer Abyssus 
+- Razer Abyssus
 - Razer Abyssus 1800
 - Razer Abyssus 2000
 - Razer Abyssus Elite DVA Edition
@@ -98,6 +104,7 @@ Mice:
 - Razer Basilisk Ultimate
 - Razer Basilisk V2
 - Razer Basilisk V3
+- Razer Basilisk V3 Pro
 - Razer DeathAdder 3 5G
 - Razer DeathAdder 1800
 - Razer DeathAdder 2013 (under older mouse effects)
@@ -154,6 +161,7 @@ e-GPUs:
 Headphones and stand:
 
 - Razer Base Station V2 Chroma
+- Razer Laptop Stand V2 Chroma
 - Razer Kraken
 - Razer Kraken 7.1
 - Razer Kraken 7.1 (Alternate)
@@ -187,7 +195,7 @@ Speakers:
 - Razer Nommo Chroma
 - Razer Nommo Pro
 
-Mugs: 
+Mugs:
 
 - Razer Chroma Mug
 - Razer Chroma Base
@@ -227,11 +235,9 @@ Ensure xcode command line tools are installed,
 
 If you have a paid Apple Developer account, edit `release.sh` with your details.
 
- Afterwards, to automatically build, sign, and/or notarize (if applicable,) run in Terminal: `./release.sh`
+Afterwards, to automatically build, sign, and/or notarize (if applicable,) run in Terminal: `./release.sh`
 
- Ad-hoc signing will be used if account information is left empty.
-
-
+Ad-hoc signing will be used if account information is left empty.
 
  Or build manually:
 
