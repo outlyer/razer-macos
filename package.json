@@ -41,7 +41,7 @@
     "node-gyp": "^8.2.0",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
-    "webpack": "^5.88.2",
+    "webpack": "^4.46.0",
     "websocket-extensions": "^0.1.4"
   },
   "electronWebpack": {
