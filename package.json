@@ -6,7 +6,7 @@
   "main": "src/main/index.js",
   "scripts": {
     "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
+    "compile": "NODE_OPTIONS=--openssl-legacy-provider electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
     "rebuild": "node-gyp rebuild",
@@ -18,7 +18,7 @@
     "electron-json-storage": "^4.2.0",
     "iohook": "file:./iohook",
     "node-addon-api": "^1.0.0",
-    "node-forge": "^0.10.0",
+    "node-forge": "^1.3.1",
     "react": "^16.13.1",
     "react-color": "^2.18.0",
     "react-dom": "^16.13.1",
@@ -41,7 +41,7 @@
     "node-gyp": "^8.2.0",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
-    "webpack": "^4.44.2",
+    "webpack": "^5.88.2",
     "websocket-extensions": "^0.1.4"
   },
   "electronWebpack": {
